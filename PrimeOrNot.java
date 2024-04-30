@@ -6,14 +6,14 @@ public class PrimeOrNot {
         System.out.print("Enter a number: ");
         int n = sc.nextInt();
         int flag=0;
-        for(int i=1;i<=n;i++)
+        for(int i=2;i<=n;i++)
       {
         if(n%i==0)
         {
             flag++;
         }
       }
-      if(flag==2)
+      if(flag==1)
       {
         System.out.println(n + " is Prime a number");
       }
