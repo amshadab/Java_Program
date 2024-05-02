@@ -1,23 +1,24 @@
 import java.io.*;
-public class Lines {
+public class Words {
 
     public static void main(String[] args) throws IOException {
         File f = new File("Hello.txt");
         f.createNewFile();
-        FileWriter fw = new FileWriter("Hello.txt");
-        fw.write("Hello World in java\nThis is my file handling code\nOkay Bye");
+        FileWriter fw = new FileWriter(f);
+        fw.write("Hello World in java");
         fw.close();
-        FileReader fr = new FileReader("Hello.txt");
-        int ch;
-        int line=0;
-        while((ch=fr.read())!=-1)
+        FileReader fr = new FileReader(f);
+      BufferedReader br = new BufferedReader(fr);
+        String line;
+        int count=0;
+        while((line=br.readLine())!=null)
         {
-            if(ch=='\n')
-            {
-               line++;
-            }
+            String word[]=line.split(" ");
+            count = count + word.length;
         }
-        System.out.println("Number of Lines: "+ (line+1));
+        System.out.println("Number of words: "+count);
+        br.close();
         fr.close();
+
     }
 }
