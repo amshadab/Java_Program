@@ -9,15 +9,15 @@ public class Lines {
         fw.close();
         FileReader fr = new FileReader("Hello.txt");
         int ch;
-        int word=0;
+        int line=0;
         while((ch=fr.read())!=-1)
         {
             if(ch=='\n')
             {
-               word++;
+               line++;
             }
         }
-        System.out.println("Number of Lines: "+ (word+1));
+        System.out.println("Number of Lines: "+ (line+1));
         fr.close();
     }
 }
