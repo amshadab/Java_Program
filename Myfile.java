@@ -5,11 +5,13 @@ public class Myfile {
     public static void main(String[] args) throws IOException{
       File f = new File("Hello.txt");
       f.createNewFile();
-    FileWriter fw = new FileWriter("Hello.txt");
+    FileWriter fw = new FileWriter(f);
     fw.write("Hello world this is my first file in java");
     fw.close();
-    FileReader fr = new FileReader("Hello.txt");
-    FileWriter fw2 = new FileWriter("Copy.txt");
+    FileReader fr = new FileReader(f);
+    File f2 = new File("Copy.txt");
+    f.createNewFile();
+    FileWriter fw2 = new FileWriter(f2);
     int ch;
     while((ch=fr.read())!=-1)
     {
