@@ -11,6 +11,10 @@ public class PrimeOrNot {
         if(n%i==0)
         {
             flag++;
+            if(flag>1)
+            {
+              break;
+            }
         }
       }
       if(flag==1)
