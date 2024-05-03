@@ -6,11 +6,16 @@ class Student
     String name;
     public void SetData()
     {
+        
         Scanner sc = new Scanner(System.in);
+        
         System.out.print("Enter Student ID: ");
         id = sc.nextInt();
+        sc.nextLine();
         System.out.print("Enter Student name: ");
-        name = sc.next();
+        name = sc.nextLine();
+    
+      
         
     }
     public void display()
@@ -32,6 +37,6 @@ public class ArrayOfObject {
             obj[i].display();
         }
         
-
+        
     }
 }
