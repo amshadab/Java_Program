@@ -10,7 +10,7 @@ public class Myfile {
     fw.close();
     FileReader fr = new FileReader(f);
     File f2 = new File("Copy.txt");
-    f.createNewFile();
+    f2.createNewFile();
     FileWriter fw2 = new FileWriter(f2);
     int ch;
     while((ch=fr.read())!=-1)
